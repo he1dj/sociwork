@@ -37,7 +37,7 @@ class UserAdmin(auth_admin.UserAdmin):
     )
     list_display = ["email", "name", "is_superuser"]
     search_fields = ["name"]
-    ordering = ["uuid"]
+    ordering = ["id"]
     add_fieldsets = (
         (
             None,

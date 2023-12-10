@@ -6,6 +6,7 @@ from django.conf import settings
 class Post(models.Model):
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True)
     title = models.CharField(max_length=255)
+    descriptiom = models.TextField(max_length=255)
     content = models.TextField()
     image = models.ImageField(upload_to="images/")
     created_at = models.DateTimeField(auto_now_add=True)
